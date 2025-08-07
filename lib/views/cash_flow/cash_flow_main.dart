@@ -13,31 +13,24 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utilities/analytics.dart';
 import '../../utilities/asset_paths.dart';
-
 class CashFlowMain extends StatefulWidget {
   static const String routeName = '/cashFlowMain';
-
   final CustomerDetailsArguments arguments;
-
   const CashFlowMain(this.arguments, {Key? key}) : super(key: key);
-
   @override
   _CashFlowMainState createState() => _CashFlowMainState();
 }
-
 class _CashFlowMainState extends State<CashFlowMain> {
   List<String> listItem = <String>[
     'Customer Details',
     'Input Sheet',
     'Output Sheet'
   ];
-
   var leaveIconList = [
     assetsPath.LEAVE_APPLY_ICON,
     assetsPath.LEAVE_AUTHORIZATION_ICON,
     assetsPath.LEAVE_REQUEST_ICON,
   ];
-
   @override
   Widget build(BuildContext context) {
     print('Cash Flow Main isEditable ${widget.arguments.isEditable}');
@@ -124,7 +117,6 @@ class _CashFlowMainState extends State<CashFlowMain> {
       ),
     );
   }
-
   Future<bool> _willPopCallback() async {
     Navigator.pushNamed(
       context,
@@ -132,7 +124,6 @@ class _CashFlowMainState extends State<CashFlowMain> {
     );
     return true;
   }
-
   @override
   void initState() {
     print('cash flow main ${widget.arguments.isEditable}');
@@ -141,7 +132,6 @@ class _CashFlowMainState extends State<CashFlowMain> {
 
     super.initState();
   }
-
   @override
   void dispose() {
     sessionManager.clearCustomerId();
@@ -149,7 +139,6 @@ class _CashFlowMainState extends State<CashFlowMain> {
     //print('In Session customerID in Dispose clear customerID');
     super.dispose();
   }
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

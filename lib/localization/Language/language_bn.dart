@@ -41,7 +41,7 @@ class LanguageBn extends Languages {
   String get password => "পাসওয়ার্ড";
 
   @override
-  String get userHint => "ইউজার আইডি বা পিন";
+  String get userHint => "ইউজার আইডি";
 
   @override
   String get digitInfo => "4 ডিজিটের OTP লিখুন";

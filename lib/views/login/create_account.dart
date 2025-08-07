@@ -74,7 +74,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   builder: (context) =>
                       AlertDialogWidget(
                         title: "Invalid Input",
-                        description: "Please enter valid USER ID/PIN",
+                        description: "Please enter valid Identification Number",
                       ),
                 );
               }
@@ -147,8 +147,8 @@ class _CreateAccountState extends State<CreateAccount> {
                       color: ColorResources.TEXT_FIELD_BORDER_COLOR,
                       width: 0.0),
                 ),
-                hintText: 'USER ID/PIN',
-                labelText: 'USER ID/PIN',
+                hintText: 'Identification Number',
+                labelText: 'Identification Number',
 
                 contentPadding: EdgeInsets.all(20),
                 hintStyle:
@@ -171,7 +171,7 @@ class _CreateAccountState extends State<CreateAccount> {
               keyboardType: TextInputType.number,
               maxLength: 5,
               validator: (value) =>
-              value!.isEmpty ? 'Please enter your PIN' : null,
+              value!.isEmpty ? 'Please enter Identification Number' : null,
             ),
             /// Name
             SizedBox(height: 20,),
@@ -253,8 +253,8 @@ class _CreateAccountState extends State<CreateAccount> {
                       color: ColorResources.TEXT_FIELD_BORDER_COLOR,
                       width: 0.0),
                 ),
-                hintText: 'Mobile OTP',
-                labelText: 'Mobile OTP',
+                hintText: 'Mobile Number',
+                labelText: 'Mobile Number',
 
                 contentPadding: EdgeInsets.all(20),
                 hintStyle:
@@ -272,7 +272,7 @@ class _CreateAccountState extends State<CreateAccount> {
               maxLength: 5,
               //maxLengthEnforcement: MaxLengthEnforcement.enforced,
               validator: (value) =>
-              value!.isEmpty ? 'Please enter your OTP' : null,
+              value!.isEmpty ? 'Please enter your Mobile Number' : null,
             ),
 
             TextFormField(
@@ -369,13 +369,6 @@ class _CreateAccountState extends State<CreateAccount> {
 
             ),
             const SizedBox(height: 20),
-
-
-
-
-
-
-
             /// Submit Button
             ElevatedButton(
               style: ElevatedButton.styleFrom(

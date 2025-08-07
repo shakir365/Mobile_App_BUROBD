@@ -138,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(children: [
 
                     Visibility(
-                      visible: false,
+                      visible: true,
                       child: InkWell(
                         onTap: () {
                           //openLinkInBrowser('https://www.burobd.org/about-buro');

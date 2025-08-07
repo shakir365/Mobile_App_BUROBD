@@ -41,7 +41,7 @@ class LanguageEn extends Languages {
   String get password => "Password";
 
   @override
-  String get userHint => "User ID / PIN";
+  String get userHint => "User ID";
 
   @override
   String get digitInfo => "Enter 4 digit OTP";

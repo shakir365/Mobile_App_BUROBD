@@ -51,11 +51,9 @@ class _OutputSheetState extends State<OutputSheet>
   late LoanEligibilityCubit loanEligibilityCubit;
   late FrequencyCubit frequencyCubit;
   late SeasonalityNMarginCubit seasonalityNMarginCubit;
-
   late WorkingCapitalCubit workingCapitalCubit;
   late WorkingCapitalRequirmentCubit workingCapitalRequirmentCubit;
   late MarginCubit marginCubit;
-
   String nextButtonText = 'Next';
 
   @override
@@ -1541,7 +1539,6 @@ DataRow buildDataRowWithFour(
     DataCell(Text(monthly)),
   ]);
 }
-
 DataRow buildDataRowWithFive(
     String seasonality, String low, String medium, String high, String total) {
   return DataRow(cells: [

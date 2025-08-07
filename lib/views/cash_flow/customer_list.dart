@@ -10,12 +10,9 @@ import '../../theme/colors.dart';
 import '../../theme/styles.dart';
 
 import 'cash_flow_main.dart';
-
 class CustomerList extends StatefulWidget {
   static const String routeName = '/customerList';
-
   const CustomerList({Key? key}) : super(key: key);
-
   @override
   _CustomerListState createState() => _CustomerListState();
 }
@@ -23,11 +20,9 @@ class CustomerList extends StatefulWidget {
 class _CustomerListState extends State<CustomerList> {
   var count = 0;
   late CustomerListCubit customerListCubit;
-
   late BuroRepository buroRepository;
   late TextEditingController _customerID;
   late TextEditingController _branhCode;
-
   @override
   void initState() {
     print('Init state called');
@@ -36,10 +31,8 @@ class _CustomerListState extends State<CustomerList> {
     _branhCode = TextEditingController();
     customerListCubit.getCustomerList(' ');
     buroRepository = BuroRepository();
-
     sessionManager.customerID.then(
         (value) => {print('In Session customerID customer_list ${value}')});
-
     super.initState();
   }
 

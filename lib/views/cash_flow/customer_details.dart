@@ -60,22 +60,17 @@ List<NameIDModel> listServiceQualityWithId = [];
 List<NameIDModel> listRelationWithCustomerWithId = [];
 List<NameIDModel> listInteractionWithCustomerWithId = [];
 List<NameIDModel> listResidenceOwnerShipWithId = [];
-
 bool hasCustomerInfo = false;
 bool hasEnterpriseInfo = false;
 bool hasLoanInfo = false;
 bool hasSupplierInfo = false;
 bool hasBuyerInfo = false;
 bool hasReferenceInfo = false;
-
 List<NameIDModel> listRePaymentBehaviourWithId = [];
-
 class CustomerDetails extends StatefulWidget {
   static const String routeName = '/CustomerDetails';
   final CustomerDetailsArguments arguments;
-
   const CustomerDetails(this.arguments, {Key? key}) : super(key: key);
-
   @override
   _CustomerDetailsState createState() => _CustomerDetailsState();
 }
@@ -616,7 +611,6 @@ class _CustomerDetailsState extends State<CustomerDetails>
         ),
       ),
       body: TabBarView(
-
         controller: tabController,
         children: <Widget>[
           customer_details(), // Customer Details
@@ -807,7 +801,6 @@ class _CustomerDetailsState extends State<CustomerDetails>
 
   Widget customer_details() {
     //String? dropdownValue = listGender.first;
-
     return widget.arguments.isEditable
         ? BlocConsumer<CustomerListCubit, CustomerListState>(
             listener: (context, state) {
